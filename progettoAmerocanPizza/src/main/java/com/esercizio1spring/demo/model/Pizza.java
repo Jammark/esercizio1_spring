@@ -3,12 +3,17 @@ package com.esercizio1spring.demo.model;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+import lombok.Getter;
 
+@Getter
 public class Pizza extends PizzaDecorator {
 
-	public Pizza(String name, Consumation[] campi) {
+	private int calorie;
+
+	public Pizza(String name, Consumation[] campi, int calorie) {
 		super(name,
 				campi);
+		this.calorie = calorie;
 
 	}
 
